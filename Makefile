@@ -11,7 +11,7 @@ Build/%.o: Source/%.cpp
 	@g++ -c $^ $(CCOptions) -o $@
 
 nmc: $(Objects)
-	@g++ $(Objects) $(CCOptions) -o NMC
+	@g++ $(Objects) glad/src/glad.c $(CCOptions) -o NMC
 
 run:
 	@./NMC
